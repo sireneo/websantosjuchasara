@@ -1,0 +1,58 @@
+/* typography.css — TAMAÑO DE TEXTO (se carga al final y sobrescribe a los demás)
+   Cambia SOLO la variable --t para agrandar o reducir todo el texto pequeño del sitio:
+   1 = tamaño original · 1.05–1.3 = automático según el ancho de pantalla (móvil · laptop · 4K) · 1.2 = bastante más grande.
+   El menú superior (header.css) no se escala para que no se desborde. */
+:root{--t:1.05}@media(max-width:520px){:root{--t:1}}@media(min-width:1600px){:root{--t:1.15}}@media(min-width:2200px){:root{--t:1.3}}
+body{font-size:calc(15px*var(--t))}
+.tb{height:215px}
+.tg{font-size:calc(11px*var(--t))}
+.sg2 button{font-size:calc(12.5px*var(--t))}
+.hl p{font-size:calc(13.5px*var(--t))}
+.hl-s span{font-size:calc(11px*var(--t))}
+#aih{font-size:calc(13px*var(--t))}
+body{font-size:calc(15px*var(--t))}
+.card h4{font-size:calc(15.5px*var(--t))}
+.card p{font-size:calc(12.5px*var(--t))}
+.meta{font-size:calc(10px*var(--t))}
+.chip{font-size:calc(10.5px*var(--t))}
+.tabs button{font-size:calc(13px*var(--t))}
+table{font-size:calc(12.5px*var(--t))}
+th{font-size:calc(10px*var(--t))}
+.q{font-size:calc(16px*var(--t))}
+.q small{font-size:calc(12px*var(--t))}
+.bl{font-size:calc(12px*var(--t))}
+.ti small{font-size:calc(10.5px*var(--t))}
+.ti h4{font-size:calc(15px*var(--t))}
+.ti p{font-size:calc(12.5px*var(--t))}
+.ti .x{font-size:calc(12.5px*var(--t))}
+.fl button{font-size:calc(12px*var(--t))}
+.ods span{font-size:calc(10px*var(--t))}
+.eb{font-size:calc(11px*var(--t))}
+.badge{font-size:calc(10.5px*var(--t))}
+.ty span{font-size:calc(15px*var(--t))}
+.btn{font-size:calc(13.5px*var(--t))}
+.st span{font-size:calc(10px*var(--t))}
+.pb{font-size:calc(10px*var(--t))}
+.th{font-size:calc(11px*var(--t))}
+.tb{font-size:calc(12px*var(--t))}
+.tin{font-size:calc(12px*var(--t))}
+.sb b{font-size:calc(13px*var(--t))}
+.sb small{font-size:calc(10.5px*var(--t))}
+.dock a .tp{font-size:calc(11px*var(--t))}
+.bc b{font-size:calc(14px*var(--t))}
+.bc small{font-size:calc(11.5px*var(--t))}
+.mqt span{font-size:calc(13px*var(--t))}
+.sq{font-size:calc(15px*var(--t))}
+.legal{font-size:calc(11px*var(--t))}
+.cl a,.cl button{font-size:calc(13px*var(--t))}
+.pi input{font-size:calc(15px*var(--t))}
+.pr{font-size:calc(13px*var(--t))}
+.pr em{font-size:calc(10px*var(--t))}
+.mo p{font-size:calc(13px*var(--t))}
+.ah b{font-size:calc(14px*var(--t))}
+.ah small{font-size:calc(10px*var(--t))}
+.mg{font-size:calc(13px*var(--t))}
+.mg button{font-size:calc(11px*var(--t))}
+.sg button{font-size:calc(11px*var(--t))}
+.af input{font-size:calc(13px*var(--t))}
+#toast{font-size:calc(12px*var(--t))}

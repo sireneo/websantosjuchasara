@@ -1,0 +1,27 @@
+/* redesign.css — v3: fondo aurora, tarjetas de cristal, identidad académica, navegación (riel + barra móvil) y diseño fluido */
+body::before{content:"";position:fixed;inset:-25%;z-index:-4;pointer-events:none;background:conic-gradient(from var(--a) at 50% 40%,rgba(0,217,255,.13),transparent 22%,rgba(81,162,218,.17) 48%,transparent 72%,rgba(201,168,106,.1));filter:blur(90px);animation:sp 45s linear infinite}
+.wrap{max-width:clamp(1240px,80vw,1720px);padding-inline:clamp(16px,3.2vw,48px)}.nav{max-width:clamp(1320px,86vw,1840px)}
+section{padding:clamp(56px,8vw,112px) 0;position:relative}section:before{content:"";position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(0,217,255,.35),transparent)}
+section:nth-of-type(even):after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent,rgba(21,92,140,.1),transparent);pointer-events:none}
+h2{font-size:clamp(1.7rem,3.2vw,3.2rem);max-width:24ch}.hero h1{font-size:clamp(2.2rem,5.6vw,5.4rem)}.sub{font-size:clamp(15px,1.15vw,19px)}.lead{font-size:clamp(1rem,1.25vw,1.3rem)}
+.hero{padding:clamp(24px,5vw,70px) 0 clamp(40px,6vw,90px);gap:clamp(24px,4vw,64px)}.ty{min-height:48px;min-width:min(100%,360px)}
+.card,.st,.tw,.sb,.term,.hl{border:1px solid transparent;background:linear-gradient(rgba(10,26,52,.84),rgba(8,20,42,.84)) padding-box,linear-gradient(135deg,rgba(0,217,255,.4),rgba(255,255,255,.06) 42%,rgba(201,168,106,.32)) border-box}
+.hl{background:linear-gradient(rgba(32,28,18,.8),rgba(10,26,52,.84)) padding-box,linear-gradient(135deg,rgba(201,168,106,.7),rgba(255,255,255,.06) 50%,rgba(0,217,255,.35)) border-box}
+.card:hover{box-shadow:0 22px 60px rgba(0,0,0,.5),0 0 40px rgba(0,217,255,.12)}
+#idbar{display:flex;gap:6px 16px;flex-wrap:wrap;align-items:center;justify-content:center;padding:7px 16px;background:linear-gradient(90deg,rgba(15,44,92,.95),rgba(8,20,42,.95));border-bottom:1px solid rgba(201,168,106,.4);font:600 12.5px Inter;position:relative;z-index:41}
+#idbar .idn{color:var(--gold);font-weight:800;letter-spacing:.05em;margin-right:auto}#idbar a{display:flex;gap:7px;align-items:center;color:#cfe0f7;padding:3px 10px;border-radius:99px;transition:.2s}#idbar a:hover{background:rgba(255,255,255,.1);color:#fff}
+#idbar i{display:grid;place-items:center;width:18px;height:18px;font-style:normal}#idbar svg,#idbar img{width:18px;height:18px;border-radius:50%}
+.lvl{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}.badge.b2{background:rgba(201,168,106,.12);border-color:rgba(201,168,106,.42);color:#f1dcae}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}.pc{cursor:pointer}.pc:hover .meta{letter-spacing:.14em}
+#rail{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;gap:13px;align-items:flex-end}
+#rail a{display:flex;align-items:center;gap:9px;flex-direction:row-reverse;font:700 11.5px Inter}#rail i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.28);transition:.25s}
+#rail span{opacity:0;transform:translateX(8px);transition:.25s;background:#0b1730;border:1px solid var(--line);padding:4px 10px;border-radius:8px;white-space:nowrap;color:#fff;pointer-events:none}
+#rail a:hover span,#rail a.on span{opacity:1;transform:none}#rail a.on i{background:var(--cy);box-shadow:0 0 12px var(--cy);transform:scale(1.6)}
+#tabbar{display:none}
+@media(max-width:1100px){#rail{display:none}}
+@media(max-width:1000px){.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+ #tabbar{display:flex;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;background:rgba(8,20,42,.93);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:20px;padding:6px;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+ #tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 2px;border-radius:14px;font:700 10.5px Inter;color:var(--mut)}#tabbar b{font-size:19px;line-height:1}#tabbar a.on{color:var(--cy);background:rgba(0,217,255,.13)}
+ #ai{bottom:calc(92px + env(safe-area-inset-bottom,0px));right:12px}#aib{width:66px;height:66px}footer{padding-bottom:150px}.nav .ib span,.nav .ib kbd{display:none}.hl{padding:18px}.hl-s{margin-left:0}}
+@media(max-width:560px){.g4{grid-template-columns:1fr}#idbar{font-size:11.5px;gap:4px 8px}#idbar .idn{display:none}.hero h1{letter-spacing:-.035em}.brand span{display:none}}

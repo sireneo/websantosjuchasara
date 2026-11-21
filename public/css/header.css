@@ -1,0 +1,14 @@
+/* header.css — Header, navegación, menú móvil y dock de redes */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;backdrop-filter:blur(18px) saturate(1.3);background:rgba(5,13,28,.78);border-bottom:1px solid var(--line)}
+.nav{max-width:1320px;margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:11px;cursor:pointer}.brand img{width:44px;height:44px;border-radius:12px;object-fit:cover;border:1.5px solid rgba(81,162,218,.6);box-shadow:0 0 0 3px rgba(81,162,218,.15)}
+.brand b{display:block;font:700 14px 'Space Grotesk'}.brand span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cy);font-weight:700}
+.links{display:flex;gap:2px}.links button{border:1px solid transparent;background:0;padding:7px 11px;border-radius:9px;font:600 12px Inter;color:var(--mut);cursor:pointer;transition:.2s}
+.links button:hover{color:var(--ink);background:rgba(255,255,255,.06)}.links button.on{color:var(--cy);background:rgba(0,217,255,.1);border-color:rgba(0,217,255,.2)}
+.act{display:flex;gap:8px}.ib{padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--mut);font:700 11.5px Inter;cursor:pointer;display:flex;gap:7px;align-items:center}.ib:hover{color:#fff;border-color:rgba(0,217,255,.4)}
+.ib kbd{background:rgba(255,255,255,.1);padding:1px 6px;border-radius:4px;font:inherit}.ham{display:none}
+@media(max-width:1320px){.links{display:none}.ham{display:flex}}
+#mob{position:fixed;inset:0;z-index:60;background:rgba(5,13,28,.97);padding:70px 20px 20px;display:none;gap:8px;flex-direction:column;overflow:auto}#mob.open{display:flex}#mob button{text-align:left;padding:13px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#dbe4f5;font:600 15px 'Space Grotesk'}
+.dock{position:fixed;left:14px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;gap:9px}
+.dock a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:rgba(14,32,62,.75);backdrop-filter:blur(10px);transition:.22s;font:800 12px 'Space Grotesk'}.dock a:hover{transform:translateX(5px) scale(1.08);border-color:var(--cy);box-shadow:0 0 18px rgba(0,217,255,.35)}
+@media(max-width:1280px){.dock{display:none}}
